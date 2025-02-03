@@ -39,7 +39,7 @@ O projeto contém a seguinte estrutura:
 
 ## Demonstração em Vídeo :video_camera:
 
-Confira o vídeo com uma demonstração da simulação e execução desta tarefa:
+Confira o vídeo com a execução desta tarefa na placa BitDogLab:
 
 [Assista ao vídeo](https://youtube.com/shorts/0zFoVwcjHgA?feature=share)
 
