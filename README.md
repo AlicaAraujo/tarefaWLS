@@ -1,52 +1,52 @@
-# Números na Matriz de LED :desktop_computer:
+# Números na Matriz de LED :microchip:
 
-## Sobre :pencil:
+## Descrição do Projeto :memo:
 
-Este repositório tem como objetivo consolidar a compreensão dos conceitos relacionados ao uso de interrupções no microcontrolador RP2040, bem como explorar as funcionalidades da placa de desenvolvimento BitDogLab. Este projeto foi desenvolvido como parte de uma tarefa na Unidade 4 do Capítulo 4 da EmbarcaTech, residência de Sistemas Embarcados.
+Este repositório foi desenvolvido para demonstrar a utilização do microcontrolador RP2040 e a placa BitDogLab, com o intuito de aplicar conceitos de interrupções e controle de hardware em sistemas embarcados. O projeto foi criado como parte de uma tarefa prática na EmbarcaTech, na residência de Sistemas Embarcados.
 
-### Descrição da Tarefa
+### Objetivo da Tarefa
 
-A tarefa envolve a utilização dos seguintes componentes:
+A tarefa consiste na construção de um programa para controlar os seguintes componentes:
 
-1. **Matriz 5x5 de LEDs (endereçáveis) WS2812**, conectada à GPIO 7;
-2. **LED RGB**, com os pinos conectados às GPIOs (11, 12 e 13);
-3. **Botão A**, conectado à GPIO 5;
-4. **Botão B**, conectado à GPIO 6.
+1. **Matriz 5x5 de LEDs WS2812** conectada à GPIO 7.
+2. **LED RGB** com os pinos conectados às GPIOs (11, 12 e 13).
+3. **Botão A** conectado à GPIO 5.
+4. **Botão B** conectado à GPIO 6.
 
-As funcionalidades implementadas são as seguintes:
+As funcionalidades implementadas são:
 
-- O **LED vermelho** deve piscar continuamente 5 vezes por segundo.
-- O **botão A** deve incrementar o número exibido na matriz de LEDs a cada vez que for pressionado.
-- O **botão B** deve decrementar o número exibido na matriz de LEDs a cada vez que for pressionado.
-- A **matriz de LEDs WS2812** deve ser usada para criar efeitos visuais representando números de 0 a 9, com a formatação em estilo digital ou de forma criativa, desde que os números sejam claramente identificáveis.
+- O **LED vermelho** pisca 5 vezes por segundo.
+- O **botão A** incrementa o número exibido na matriz de LEDs quando pressionado.
+- O **botão B** decrementa o número exibido na matriz de LEDs quando pressionado.
+- Os **LEDs WS2812** são utilizados para exibir números de 0 a 9 na matriz, utilizando um estilo digital ou criativo, desde que o número seja claramente identificável.
 
-### Estruturação dos Arquivos
+### Estrutura do Projeto
 
-O projeto é composto pelos seguintes arquivos e diretórios:
+O projeto contém a seguinte estrutura:
 
-- **Arquivos principais** do projeto Pico W, incluindo o código de configuração.
-- **Pasta `wokwi`**: Contém os arquivos `diagram.json` e `wokwi.toml` para a simulação no Wokwi.
+- **Arquivos principais** do projeto para configuração e execução no ambiente Pico W.
+- **Pasta `wokwi`**: Contém os arquivos `diagram.json` e `wokwi.toml` para a simulação do projeto no Wokwi.
 - **Pasta `include`**: Contém os arquivos de código fonte:
   - Arquivos `.c`:
-    - `animation.c`: Funções relacionadas à animação.
-    - `button.c`: Funções relacionadas aos botões.
-    - `led-rgb.c`: Funções relacionadas ao LED RGB.
-    - `matriz_led.c`: Funções relacionadas à matriz de LEDs.
+    - `animation.c`: Funções de animação para a matriz de LEDs.
+    - `button.c`: Funções relacionadas ao controle dos botões.
+    - `led-rgb.c`: Funções para controle do LED RGB.
+    - `matriz_led.c`: Funções para controle da matriz de LEDs.
   - Arquivos `.h`:
-    - `animation.h`, `button.h`, `led-rgb.h`, `matriz_led.h`: Cabeçalhos das funções acima.
+    - Cabeçalhos para as funções nos arquivos `.c`.
 - **Arquivo `ws2818b.pio`**: Contém o código PIO para controlar os LEDs WS2812.
-- **Arquivo `contador-embarcatech.c`**: Gerencia todo o projeto.
+- **Arquivo `contador-embarcatech.c`**: Controla a execução principal do projeto.
 
-## Vídeo :video_camera:
+## Demonstração em Vídeo :video_camera:
 
-Aqui está o link para o vídeo com uma prática de simulação associada a esta tarefa:
+Confira o vídeo com uma demonstração da simulação e execução desta tarefa:
 
 [Assista ao vídeo](https://youtube.com/shorts/0zFoVwcjHgA?feature=share)
 
-## Como Utilizar :computer_mouse:
+## Como Executar :keyboard:
 
-Para utilizar o programa, siga os seguintes passos:
+Para executar este projeto, siga os passos abaixo:
 
-1. Clone o repositório em uma pasta separada:
+1. Clone este repositório para sua máquina local:
    ```bash
    git clone https://github.com/AlicaAraujo/tarefaWLS.git
