@@ -223,8 +223,8 @@ int main() {
     // Inicializa o PIO e configura o programa para controlar a matriz de LEDs
     sm = matriz_init(PIN_LED_MATRIZ);
 
-    // Configura um temporizador para chamar a função de callback a cada 200 milissegundos, resultando em 5 chamadas por segundo.
-    add_repeating_timer_ms(200, repeating_timer_callback, NULL, &timer);
+    // Configura um temporizador para chamar a função de callback a cada 100 milissegundos, resultando em 5 chamadas por segundo.
+    add_repeating_timer_ms(100, repeating_timer_callback, NULL, &timer);
 
     // Chama a função para exibir o número na matriz de LEDs, passando o padrão
     // definido no array e o contador atual (cont) que representa o número desejado.
