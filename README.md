@@ -34,7 +34,7 @@ O projeto contém a seguinte estrutura:
 
 Confira o vídeo com a execução desta tarefa na placa BitDogLab:
 
-[Assista ao vídeo](https://youtube.com/shorts/0zFoVwcjHgA?feature=share)
+[Assista ao vídeo]()
 
 ## Como Executar :keyboard:
 
