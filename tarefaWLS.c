@@ -1,3 +1,11 @@
+/*
+Autor (a): Alícia Oliveira Araújo
+
+Tarefa WLS - Aula Síncrona do dia 27/01/2025
+
+Última modificação: 02/02/2025
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "hardware/adc.h"
@@ -23,6 +31,7 @@ static volatile uint32_t last_time = 0;
 PIO pio = pio0;
 uint sm;
 uint8_t cont = 0; // Variável que armazena o valor que será exibido na matriz de LEDs
+
 // Matriz de animação dos números
 const uint32_t desenhoNum[10][25] = {
     { // Número 0
@@ -159,7 +168,6 @@ uint32_t matrix_rgb(double r, double g, double b) {
     return (R << 16) | (G << 8) | (B); 
 }
 
-
 // Função para acionar a matriz de LEDs WS2812B
 void acionaMatriz(const uint32_t *desenho, PIO pio, uint sm, double r, double g, double b) {
     for (int16_t i = 0; i < NUM_PIXELS; i++) {
@@ -180,17 +188,26 @@ void acionaMatriz(const uint32_t *desenho, PIO pio, uint sm, double r, double g,
     }
 }
 
-
 // Função que desenha um número na matriz de LEDs
 void desenhaNumero(uint8_t numero) {
     const uint32_t *desenho = desenhoNum[numero];
-    // Chama a função para desenhar o número na matriz
-    acionaMatriz(desenho, pio, sm, 0.53, 0.81, 0.98); // Azul bebê
+    double cores[10][3] = {
+        {1.0, 0.0, 0.0}, // Vermelho
+        {0.0, 1.0, 0.0}, // Verde
+        {1.0, 0.0, 1.0}, // Rosa
+        {0.0, 1.0, 1.0}, // Ciano
+        {1.0, 1.0, 0.0}, // Amarelo
+        {1.0, 0.0, 1.0}, // Magenta
+        {0.0, 1.0, 1.0}, // Ciano
+        {1.0, 0.5, 0.0}, // Laranja
+        {0.5, 0.0, 1.0}, // Roxo
+        {0.5, 1.0, 0.0}  // Verde-limão
+    };
+    acionaMatriz(desenho, pio, sm, cores[numero][0], cores[numero][1], cores[numero][2]);
 }
 
 int main() {
     stdio_init_all(); // Inicializa a comunicação serial
-    sleep_ms(2000);    // Aguarde um pouco para evitar travamento no boot
     
     // Configuração dos LEDs 
     led_init(LED_VERMELHO);
@@ -223,19 +240,19 @@ int main() {
 // cada atualização.
 void gpio_irq_handler(uint gpio, uint32_t eventos) {
     uint32_t current_time = to_us_since_boot(get_absolute_time());
-
     if (current_time - last_time > 200000) { // 200 ms de debouncing
-        last_time = current_time; 
-
+        last_time = current_time;
         if (gpio == BOTAO_A) {
             cont++;
             if (cont > 9) cont = 0;
         } 
         else if (gpio == BOTAO_B) {
-            cont--;
-            if (cont < 0) cont = 0;
-        } 
-        
+            if (cont == 0) {
+                cont = 9;  // Se já for 0, volta para 9
+            } else {
+                cont--;
+            }
+        }
         desenhaNumero(cont); // Atualiza a matriz com o número modificado
     }
 }
