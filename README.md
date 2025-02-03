@@ -25,7 +25,7 @@ As **funcionalidades** implementadas são:
 O projeto contém a seguinte estrutura:
 
 - **Arquivos principais** do projeto para configuração e execução no ambiente Pico W.
-- **Arquivos ligados ao ****`wokwi`**: Este projeto contém os arquivos `diagram.json` e `wokwi.toml` para a simulação do projeto no Wokwi.
+- **Arquivos ligados ao **`wokwi`**: Este projeto contém os arquivos `diagram.json` e `wokwi.toml` para a simulação do projeto no Wokwi.
   - Arquivos `.h`:
     - Cabeçalhos para as funções nos arquivos `.c`.
 - **Arquivo ****`tarefaWLS.pio`**: Contém o código PIO para controlar os LEDs WS2812 e outras funções pio.
