@@ -1,10 +1,10 @@
-# Interrupções e Matriz de LEDs 💡
+<h1 align="center">Interrupções e Matriz de LEDs ⚠️ 🟥🟩🟦🟨</h1>
 
-## Descrição do Projeto :memo:
+<h2 align="center">Descrição do Projeto 📝</h2>
 
 Este repositório foi desenvolvido para demonstrar a utilização do microcontrolador RP2040 e a placa BitDogLab, com o intuito de aplicar conceitos de interrupções e controle de hardware em sistemas embarcados. O projeto foi criado como parte de uma tarefa prática na EmbarcaTech, na residência de Sistemas Embarcados.
 
-### Objetivo da Tarefa 🎯
+<h2 align="center">Objetivo da Tarefa 🎯</h2>
 
 A tarefa consiste na construção de um programa para controlar os seguintes componentes:
 
@@ -20,29 +20,31 @@ As **funcionalidades** implementadas são:
 - O **botão B** decrementa o número exibido na matriz de LEDs quando pressionado.
 - Os **LEDs WS2812** são utilizados para exibir números de 0 a 9 na matriz, utilizando um estilo digital ou criativo, desde que o número seja claramente identificável.
 
-### Estrutura do Projeto 📂
+<h2 align="center">Estrutura do Projeto 📚</h2>
 
 O projeto contém a seguinte estrutura:
 
 - **Arquivos principais** do projeto para configuração e execução no ambiente Pico W.
-- **Arquivos ligados ao `wokwi`**: Este projeto contém os arquivos `diagram.json` e `wokwi.toml` para a simulação do projeto no Wokwi.
+- **Arquivos relacionados ao `wokwi`**: Este projeto contém os arquivos `diagram.json` e `wokwi.toml` para a simulação do projeto no Wokwi.
   - Arquivos `.h`:
     - Cabeçalhos para as funções nos arquivos `.c`.
-- **Arquivo `tarefaWLS.pio`**: Contém o código PIO para controlar os LEDs WS2812 e outras funções pio.
+- **Arquivo ****`tarefaWLS.pio`**: Contém o código PIO para controlar os LEDs WS2812 e outras funções pio.
 
-## Demonstração em Vídeo :video_camera:
+<h2 align="center">Demonstração/Execução em Vídeo 📹</h2>
 
 Confira o vídeo com a execução desta tarefa na placa BitDogLab:
 
-[Assista ao vídeo]()
+[Assista ao vídeo](https://youtu.be/pr9Z-Qi1RQU?si=fKc9d2CZhme0tMgX)
 
-## Como Executar :keyboard:
+<h2 align="center">Como Executar 🖥️</h2>
 
 Para executar este projeto, siga os passos abaixo:
 
 1. Clone este repositório para sua máquina local:
    ```bash
    git clone https://github.com/AlicaAraujo/tarefaWLS.git
+   ```
 2. Abrir o projeto no VS Code, importando-o pela extensão Raspberry Pi Pico;
 3. Conectar a placa BitDogLab em modo BOOTSEL;
 4. Compilar e executar o projeto.
+
