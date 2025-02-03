@@ -34,7 +34,7 @@ O projeto contém a seguinte estrutura:
 
 Confira o vídeo com a execução desta tarefa na placa BitDogLab:
 
-[Assista ao vídeo]([https://youtu.be/pr9Z-Qi1RQU?si=fKc9d2CZhme0tMgX](https://youtu.be/Ol8hqyglErM?si=83PYKO8RAllwJ-WT)
+[Assista ao vídeo]([[https://youtu.be/pr9Z-Qi1RQU?si=fKc9d2CZhme0tMgX](https://youtu.be/Ol8hqyglErM?si=83PYKO8RAllwJ-WT)](https://youtu.be/Ol8hqyglErM?si=ryYea9C3BOsrEzEp))
 
 <h2 align="center">Como Executar 🖥️</h2>
 
