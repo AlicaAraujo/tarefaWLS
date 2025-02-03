@@ -13,7 +13,7 @@ A tarefa consiste na construção de um programa para controlar os seguintes com
 3. **Botão A** conectado à GPIO 5.
 4. **Botão B** conectado à GPIO 6.
 
-As ** funcionalidades** implementadas são:
+As **funcionalidades** implementadas são:
 
 - O **LED vermelho** pisca 5 vezes por segundo.
 - O **botão A** incrementa o número exibido na matriz de LEDs quando pressionado.
