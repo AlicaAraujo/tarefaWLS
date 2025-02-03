@@ -1,4 +1,4 @@
-# Números na Matriz de LED :microchip:
+# Interrupções e Matriz de LEDs 💡
 
 ## Descrição do Projeto :memo:
 
@@ -25,17 +25,10 @@ As funcionalidades implementadas são:
 O projeto contém a seguinte estrutura:
 
 - **Arquivos principais** do projeto para configuração e execução no ambiente Pico W.
-- **Pasta `wokwi`**: Contém os arquivos `diagram.json` e `wokwi.toml` para a simulação do projeto no Wokwi.
-- **Pasta `include`**: Contém os arquivos de código fonte:
-  - Arquivos `.c`:
-    - `animation.c`: Funções de animação para a matriz de LEDs.
-    - `button.c`: Funções relacionadas ao controle dos botões.
-    - `led-rgb.c`: Funções para controle do LED RGB.
-    - `matriz_led.c`: Funções para controle da matriz de LEDs.
+- **Arquivos ligados ao `wokwi`**: Este projeto contém os arquivos `diagram.json` e `wokwi.toml` para a simulação do projeto no Wokwi.
   - Arquivos `.h`:
     - Cabeçalhos para as funções nos arquivos `.c`.
-- **Arquivo `ws2818b.pio`**: Contém o código PIO para controlar os LEDs WS2812.
-- **Arquivo `contador-embarcatech.c`**: Controla a execução principal do projeto.
+- **Arquivo `tarefaWLS.pio`**: Contém o código PIO para controlar os LEDs WS2812 e outras funções pio.
 
 ## Demonstração em Vídeo :video_camera:
 
@@ -50,3 +43,6 @@ Para executar este projeto, siga os passos abaixo:
 1. Clone este repositório para sua máquina local:
    ```bash
    git clone https://github.com/AlicaAraujo/tarefaWLS.git
+2. Abrir o projeto no VS Code, importando-o pela extensão Raspberry Pi Pico;
+3. Conectar a placa BitDogLab em modo BOOTSEL;
+4. Compilar e executar o projeto.
