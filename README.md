@@ -4,7 +4,7 @@
 
 Este repositório foi desenvolvido para demonstrar a utilização do microcontrolador RP2040 e a placa BitDogLab, com o intuito de aplicar conceitos de interrupções e controle de hardware em sistemas embarcados. O projeto foi criado como parte de uma tarefa prática na EmbarcaTech, na residência de Sistemas Embarcados.
 
-### Objetivo da Tarefa
+### Objetivo da Tarefa 🎯
 
 A tarefa consiste na construção de um programa para controlar os seguintes componentes:
 
